@@ -1,7 +1,7 @@
 import datetime
 from flask import Flask, jsonify, render_template, url_for, request, redirect, flash, request
-from flask_login import LoginManager, login_user, login_required
-from UserLogin import UserLogin
+# from flask_login import LoginManager, login_user, login_required
+# from UserLogin import UserLogin
 from flask_sqlalchemy import SQLAlchemy
 import os
 import sys
@@ -10,7 +10,7 @@ import settings
 
 app = Flask(__name__)
 app.secret_key = 'secret'
-login_manager = LoginManager(app)
+# login_manager = LoginManager(app)
 
 # app.config['SECRET_KEY'] = 'secret'
 # app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://{settings.USER}:{settings.PASSWORD}@{settings.HOST}:{settings.PORT}/{settings.DB_NAME}?charset=utf8mb4'

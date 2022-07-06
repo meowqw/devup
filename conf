@@ -1,17 +1,10 @@
 <VirtualHost *:80>
-		ServerName devupteam.ru
-		ServerAdmin email@example.com
-		WSGIScriptAlias / /var/www/dev/dev.wsgi
-		<Directory /var/www/dev/>
-			Order allow,deny
-			Allow from all
-		</Directory>
-		Alias /static /var/www/dev/static
-		<Directory /var/www/dev/static/>
-			Order allow,deny
-			Allow from all
-		</Directory>
-		ErrorLog ${APACHE_LOG_DIR}/error.log
-		LogLevel warn
-		CustomLog ${APACHE_LOG_DIR}/access.log combined
+	ServerAlias www.devupteam.ru
+	ServerAdmin email@exampleple.com
+	ServerName devupteam.ru
+	DocumentRoot /var/www/devup
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	LogLevel warn
+	FallbackResource /routes.php
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
